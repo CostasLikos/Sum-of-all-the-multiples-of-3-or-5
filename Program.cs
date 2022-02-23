@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace Sum_of_all_the_multiples_of_3_or_5
+namespace Solution
 {
-    internal class Program
+  public static class Program
+  {
+    public static int findSum(int n)
     {
-        static void Main(string[] args)
-        {
-        }
+      return Enumerable.Range(1, n).Where(num => num % 3 == 0 || num % 5 == 0).Sum();
     }
+  }
 }
